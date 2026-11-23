@@ -4118,7 +4118,12 @@ async function z(A,p={}){
   const client=await madarSupabaseReady;
   const collection=String(p.collection||"");
   if(!collection)throw Error("اسم مجموعة البيانات غير موجود.");
-  if(collection==="madar_products"&&A!=="records.list")await madarRequireAdmin(client);
+  if(A!=="records.list"){
+    const {data:authData,error:authError}=await client.auth.getUser();
+    const user=authData?.user||null;
+    if(authError||!user||user.is_anonymous)throw Error("سجّل الدخول بالبريد الإلكتروني لإجراء هذا التغيير.");
+    if(collection==="madar_products")await madarRequireAdmin(client);
+  }
   let q;
   if(A==="records.list"){
     q=client.from("madar_records").select("id,value,collection").eq("collection",collection).order("created_at",{ascending:true});
