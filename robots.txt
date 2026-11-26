@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jjv666x-maker.github.io/sitemap.xml
