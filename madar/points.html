@@ -76,6 +76,9 @@ h1{text-align:center;font-size:38px;margin:16px 0;color:#0f2040;animation:fadeDo
 .nav{display:flex;justify-content:space-around;padding:16px 0 4px;color:#888;font-size:13px;text-align:center;border-top:1px solid #eee;margin-top:16px}
 .nav div{transition:.25s;cursor:pointer}.nav div:hover{transform:translateY(-3px);color:#00a99d}
 .nav .active{color:#00a99d}
+
+/* Hide only the duplicate navigation inside the points-page iframe. */
+.phone > .nav{display:none!important}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:12px 18px;border-radius:20px;display:none;z-index:99;font-size:14px;animation:toastIn .3s ease}
 @keyframes toastIn{from{opacity:0;transform:translate(-50%,10px) scale(.9)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
 .confetti{position:fixed;pointer-events:none;z-index:999;font-size:22px;animation:fall 1.2s ease forwards}
