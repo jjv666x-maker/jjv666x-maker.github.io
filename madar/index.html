@@ -4423,6 +4423,25 @@ body{display:flex;align-items:center;justify-content:center;background:radial-gr
 @media(max-height:700px){.app-shell [data-entry-gate] .madar-auth-card{padding-top:14px;padding-bottom:12px}.madar-auth-logo{width:64px;height:64px;margin-bottom:8px}.madar-auth-subtitle{margin-bottom:10px}.madar-auth-tab{min-height:40px}.madar-auth-input{height:46px}.madar-auth-submit{min-height:48px;margin-top:10px}.madar-auth-divider{margin:10px 0 8px}.madar-auth-note{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){.madar-auth-tab,.madar-auth-input,.madar-auth-submit{transition:none}}
 </style>
+<style id="madar-product-controls-glass-20261126">
+/* Approved product-card control layout only; leave cover and card geometry unchanged. */
+.product-card .product-img-wrap > div:has(> button.card-action-heart){top:auto!important;right:auto!important;bottom:8px!important;left:8px!important}
+.product-card .product-img-wrap > div:has(> button.card-action-share){top:8px!important;right:8px!important;bottom:auto!important;left:auto!important}
+.product-card .product-img-wrap button.card-action-heart,
+.product-card .product-img-wrap button.card-action-share{
+  width:26px!important;height:26px!important;min-width:26px!important;min-height:26px!important;
+  padding:0!important;border-radius:50%!important;background:rgba(255,255,255,.58)!important;
+  border:1px solid rgba(255,255,255,.78)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:0 2px 8px rgba(26,43,61,.16)!important
+}
+.product-card .product-img-wrap button.card-action-heart-active{background:rgba(255,232,234,.6)!important;border-color:rgba(255,120,135,.45)!important}
+.product-card .product-img-wrap button.card-action-heart svg,
+.product-card .product-img-wrap button.card-action-share svg{width:13px!important;height:13px!important}
+.product-card .product-img-wrap > span.shadow.z-10{top:4px!important;left:8px!important;font-size:9px!important;padding:2px 7px!important;line-height:1.1!important}
+.dark-mode .product-card .product-img-wrap button.card-action-heart,
+.dark-mode .product-card .product-img-wrap button.card-action-share{background:rgba(28,38,48,.62)!important;border-color:rgba(255,255,255,.34)!important;box-shadow:0 2px 8px rgba(0,0,0,.24)!important}
+.dark-mode .product-card .product-img-wrap button.card-action-heart-active{background:rgba(112,45,58,.62)!important;border-color:rgba(255,125,145,.46)!important}
+</style>
 </head>
 <body>
   <div id="root"></div>
