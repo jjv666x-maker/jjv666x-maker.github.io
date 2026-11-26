@@ -4456,6 +4456,87 @@ body{display:flex;align-items:center;justify-content:center;background:radial-gr
   pointer-events: none !important;
 }
 </style>
+<style id="madar-cover-share-heart-sizes-20261126">
+/* تعميم على كل غلاف - مشاركة وقلب */
+[class*="cover"] button[class*="share"],
+[class*="image"] button[class*="share"],
+[class*="card"] button[class*="share"],
+[class*="product"]:not([class*="detail"]) button[class*="share"],
+[class*="item"] button[class*="share"] {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+}
+
+[class*="cover"] button[class*="share"] svg,
+[class*="image"] button[class*="share"] svg,
+[class*="card"] button[class*="share"] svg,
+[class*="product"]:not([class*="detail"]) button[class*="share"] svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+[class*="cover"] button[class*="fav"],
+[class*="cover"] button[class*="heart"],
+[class*="cover"] button[class*="wishlist"],
+[class*="image"] button[class*="fav"],
+[class*="image"] button[class*="heart"],
+[class*="card"] button[class*="fav"],
+[class*="card"] button[class*="heart"],
+[class*="product"]:not([class*="detail"]) button[class*="fav"],
+[class*="product"]:not([class*="detail"]) button[class*="heart"],
+[class*="item"] button[class*="fav"],
+[class*="item"] button[class*="heart"] {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+}
+
+[class*="cover"] button[class*="fav"] svg,
+[class*="cover"] button[class*="heart"] svg,
+[class*="cover"] button[class*="wishlist"] svg,
+[class*="image"] button[class*="fav"] svg,
+[class*="image"] button[class*="heart"] svg,
+[class*="card"] button[class*="fav"] svg,
+[class*="card"] button[class*="heart"] svg,
+[class*="product"]:not([class*="detail"]) button[class*="fav"] svg,
+[class*="product"]:not([class*="detail"]) button[class*="heart"] svg,
+[class*="item"] button[class*="fav"] svg,
+[class*="item"] button[class*="heart"] svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+/* يتجاوز مقاس البطاقات الأقدم، مع استثناء زر المفضلة في صفحة تفاصيل المنتج. */
+.product-card .product-img-wrap button.card-action-share,
+.product-card .product-img-wrap button.card-action-heart,
+.product-card .product-img-wrap button.card-action-heart-active {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+}
+.product-card .product-img-wrap button.card-action-share svg,
+.product-card .product-img-wrap button.card-action-heart svg,
+.product-card .product-img-wrap button.card-action-heart-active svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+/* الصفحة تستخدم home-card-btn بلا أسماء share/heart؛ قصر المقاس على أزرار غلاف المنتج. */
+.home-product-card .home-img-wrap .home-card-btn {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+}
+.home-product-card .home-img-wrap .home-card-btn svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+</style>
 </head>
 <body>
   <div id="root"></div>
