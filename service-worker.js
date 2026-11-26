@@ -11,9 +11,27 @@ self.addEventListener("activate", event => {
 // Only same-origin page navigations are cached; live Supabase/API requests stay untouched.
 self.addEventListener("fetch", event => {
   const request = event.request;
-  if (request.method !== "GET" || request.mode !== "navigate") return;
+  if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith("/assets/madar-root-images/")) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE_NAME);
+      const cached = await cache.match(request);
+      if (cached) return cached;
+      try {
+        const response = await fetch(request);
+        if (response.ok) {
+          try { await cache.put(request, response.clone()); } catch (_) {}
+        }
+        return response;
+      } catch (_) {
+        return Response.error();
+      }
+    })());
+    return;
+  }
+  if (request.mode !== "navigate") return;
   url.search = "";
   url.hash = "";
   const cacheKey = url.href;
